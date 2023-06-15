@@ -1,0 +1,36 @@
+%search {
+    display: flex;
+    align-items: stretch;
+    box-shadow: 16px 16px 17px 0 rgba(74, 74, 74, 0.1);
+
+    input {
+        background-color: $primary-color;
+        font-size: 20px;
+        color: $white;
+        border: none;
+        padding: 15px 20px;
+        @include medium-desktop {
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        &:focus {
+            border: none;
+            outline: none;
+        }
+        &::placeholder {
+            color: $white;
+        }
+    }
+    button {
+        background-color: $secondary-color;
+        color: $white;
+        font-size: 23px;
+        line-height: 23px;
+        padding: 0 20px;
+        border: none;
+        @include medium-desktop {
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+}

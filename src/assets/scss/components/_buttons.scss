@@ -28,6 +28,16 @@
     }
 }
 .secondary__btn {
+    background-color: $primary-color;
+    border: 3px solid $primary-color;
+
+    @extend %btn_common;
+    &:hover {
+        background-color: transparent;
+        border-color: $secondary-color;
+    }
+}
+.transparent__btn {
     background-color: transparent;
     border: 3px solid $white;
     @extend %btn_common;
@@ -44,4 +54,17 @@
             margin-right: 35px;
         }
     }
+}
+
+.play__btn {
+    background-color: $white;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    font-size: 26px;
+    line-height: 26px;
 }

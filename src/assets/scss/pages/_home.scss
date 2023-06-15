@@ -30,24 +30,30 @@
         font-size: 66px;
         font-weight: 600;
         color: $white;
+        @extend %common_spacing;
         @include medium-desktop {
             font-size: 50px;
         }
         @include small-desktop {
             font-size: 45px;
         }
-        @extend %common_spacing;
+        @include mobile {
+            font-size: 35px;
+        }
     }
     &__paragraph {
         color: $white;
         font-size: 30px;
+        @extend %common_spacing;
         @include medium-desktop {
             font-size: 25px;
         }
         @include small-desktop {
             font-size: 22px;
         }
-        @extend %common_spacing;
+        @include mobile {
+            font-size: 18px;
+        }
     }
 
     &__img {
@@ -67,6 +73,114 @@
             width: 100%;
             object-fit: contain;
             object-position: center;
+        }
+    }
+}
+
+// About SCSS
+.about {
+    padding: 140px 0;
+    @include medium-desktop {
+        padding: 120px 0;
+    }
+    @include small-desktop {
+        padding: 100px 0;
+    }
+    @include tablet {
+        padding: 70px 0;
+    }
+    &__title {
+        font-size: 50px;
+        font-weight: 600;
+        color: $text-black;
+        @extend %common_spacing;
+        @include medium-desktop {
+            font-size: 45px;
+        }
+        @include small-desktop {
+            font-size: 40px;
+        }
+        @include tablet {
+            font-size: 35px;
+        }
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    &__paragraph {
+        font-size: 30px;
+        @extend %common_spacing;
+        @include medium-desktop {
+            font-size: 25px;
+        }
+        @include small-desktop {
+            font-size: 22px;
+        }
+        @include tablet {
+            font-size: 18px;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+    &__video {
+        position: relative;
+        @include tablet {
+            margin-bottom: 40px;
+        }
+        &--inner {
+            width: 506px;
+            height: 480px;
+            position: relative;
+            overflow: hidden;
+            @include medium-desktop {
+                width: 100%;
+                height: auto;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $primary-color, $alpha: 0.57);
+                z-index: 1;
+            }
+        }
+        &--play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        &--shape {
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            background-color: $primary-color;
+            width: 252px;
+            height: 206px;
+            z-index: -1;
+            @include medium-desktop {
+                bottom: -30px;
+                left: -30px;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+    .row {
+        @include tablet {
+            flex-direction: column-reverse;
         }
     }
 }

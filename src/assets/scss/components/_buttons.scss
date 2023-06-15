@@ -1,0 +1,47 @@
+%btn_common {
+    border-radius: 7px;
+    font-weight: 600;
+    padding: 22px 30px;
+    color: $white;
+    transition: 0.3s ease;
+    font-size: 20px;
+    @include medium-desktop {
+        font-size: 18px;
+        padding: 16px 25px;
+    }
+    @include tablet {
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+    @include mobile {
+        font-size: 14px;
+    }
+}
+.primary__btn {
+    background-color: $secondary-color;
+    border: 3px solid $secondary-color;
+
+    @extend %btn_common;
+    &:hover {
+        background-color: transparent;
+        border-color: $white;
+    }
+}
+.secondary__btn {
+    background-color: transparent;
+    border: 3px solid $white;
+    @extend %btn_common;
+    &:hover {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+    }
+}
+
+.twin__cta {
+    display: flex;
+    button {
+        &:first-child {
+            margin-right: 35px;
+        }
+    }
+}

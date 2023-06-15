@@ -1,0 +1,72 @@
+%common_spacing {
+    margin-bottom: 50px;
+    @include medium-desktop {
+        margin-bottom: 40px;
+    }
+    @include small-desktop {
+        margin-bottom: 35px;
+    }
+    @include tablet {
+        margin-bottom: 30px;
+    }
+}
+.hero {
+    background-color: $primary-color;
+    height: 780px;
+    @include medium-desktop {
+        height: 750px;
+    }
+    @include small-desktop {
+        height: 700px;
+    }
+    @include tablet {
+        padding: 80px 0;
+        height: auto;
+    }
+    @include mobile {
+        padding: 50px 0;
+    }
+    &__title {
+        font-size: 66px;
+        font-weight: 600;
+        color: $white;
+        @include medium-desktop {
+            font-size: 50px;
+        }
+        @include small-desktop {
+            font-size: 45px;
+        }
+        @extend %common_spacing;
+    }
+    &__paragraph {
+        color: $white;
+        font-size: 30px;
+        @include medium-desktop {
+            font-size: 25px;
+        }
+        @include small-desktop {
+            font-size: 22px;
+        }
+        @extend %common_spacing;
+    }
+
+    &__img {
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+        @include medium-desktop {
+            max-width: 380px;
+        }
+        @include small-desktop {
+            max-width: 350px;
+        }
+        @include tablet {
+            display: none;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}

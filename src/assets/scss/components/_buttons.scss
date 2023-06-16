@@ -34,7 +34,8 @@
     @extend %btn_common;
     &:hover {
         background-color: transparent;
-        border-color: $secondary-color;
+        border-color: $primary-color !important;
+        color: $text-black;
     }
 }
 .transparent__btn {

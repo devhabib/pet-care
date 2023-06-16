@@ -40,6 +40,10 @@
                 color: $white;
                 font-size: 25px;
                 display: inline-block;
+                transition: 0.3s all ease-in-out;
+                &:hover {
+                    color: $secondary-color;
+                }
                 @include medium-desktop {
                     font-size: 22px;
                 }
@@ -98,8 +102,12 @@
             li {
                 a {
                     background-color: $white;
+                    transition: 0.3s all ease-out;
                     i {
                         color: $text-black;
+                    }
+                    &:hover {
+                        background-color: $primary-color;
                     }
                 }
             }

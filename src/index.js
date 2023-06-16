@@ -1,3 +1,5 @@
+import simpleParallax from "simple-parallax-js";
+
 import "./styles.scss";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -26,4 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+});
+
+var image = document.getElementsByClassName("hero__img");
+new simpleParallax(image, {
+  delay: 0.3,
+  transition: "cubic-bezier(0,0,0,0.1)",
+  scale: 0.95,
+  orientation: "down left",
 });
